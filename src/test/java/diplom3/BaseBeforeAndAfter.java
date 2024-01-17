@@ -38,7 +38,7 @@ public class BaseBeforeAndAfter {
         driver.quit();
 
         if(accessToken != null) {
-            userClient.userDelete(accessToken);
+            UserClient.userDelete(accessToken);
 
         }
     }
