@@ -7,7 +7,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class ProfileTest extends BaseBeforeAndAfter {
 
@@ -28,8 +28,7 @@ public class ProfileTest extends BaseBeforeAndAfter {
         mainPage
                 .clickPersonalCabinet();
 
-        assertEquals("Юзер не в профиле",
-                true,
+        assertTrue("Юзер не в профиле",
                 profilePage.checkProfileHeader());
 
     }
@@ -53,8 +52,7 @@ public class ProfileTest extends BaseBeforeAndAfter {
         profilePage
                 .clickConstructorButton();
 
-        assertEquals("Юзер не на главной",
-                true,
+        assertTrue("Юзер не на главной",
                 mainPage.checkOrderButton());
 
     }
@@ -78,8 +76,7 @@ public class ProfileTest extends BaseBeforeAndAfter {
         profilePage
                 .clickLogoButton();
 
-        assertEquals("Юзер не на главной",
-                true,
+        assertTrue("Юзер не на главной",
                 mainPage.checkOrderButton());
 
     }
@@ -103,10 +100,8 @@ public class ProfileTest extends BaseBeforeAndAfter {
         profilePage
                 .clickLogOutButton();
 
-        assertEquals("Юзер все еще авторизован",
-                true,
+        assertTrue("Юзер все еще авторизован",
                 loginPage.checkEnterHeader());
 
     }
-
 }

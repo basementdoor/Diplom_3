@@ -9,7 +9,7 @@ import org.junit.Test;
 
 
 import static diplom3.utils.Utils.faker;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class ErrorRegistrationTest extends BaseBeforeAndAfter {
 
@@ -30,8 +30,7 @@ public class ErrorRegistrationTest extends BaseBeforeAndAfter {
         registrationPage
                 .userRegistration(faker.name().username(), faker.internet().emailAddress(), faker.internet().password(1, 5));
 
-        assertEquals("Сообщение об ошибке не появилось",
-                true,
+        assertTrue("Сообщение об ошибке не появилось",
                 registrationPage.checkErrorMessage());
     }
 

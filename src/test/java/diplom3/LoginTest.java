@@ -8,7 +8,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class LoginTest extends BaseBeforeAndAfter {
 
@@ -26,8 +26,7 @@ public class LoginTest extends BaseBeforeAndAfter {
         loginPage
                 .userLogin(user.getEmail(), user.getPassword());
 
-        assertEquals("Юзер не авторизован",
-                true,
+        assertTrue("Юзер не авторизован",
                 mainPage.checkOrderButton());
 
     }
@@ -46,8 +45,7 @@ public class LoginTest extends BaseBeforeAndAfter {
         loginPage
                 .userLogin(user.getEmail(), user.getPassword());
 
-        assertEquals("Юзер не авторизован",
-                true,
+        assertTrue("Юзер не авторизован",
                 mainPage.checkOrderButton());
 
     }
@@ -71,8 +69,7 @@ public class LoginTest extends BaseBeforeAndAfter {
         loginPage
                 .userLogin(user.getEmail(), user.getPassword());
 
-        assertEquals("Юзер не авторизован",
-                true,
+        assertTrue("Юзер не авторизован",
                 mainPage.checkOrderButton());
 
     }
@@ -96,8 +93,7 @@ public class LoginTest extends BaseBeforeAndAfter {
         loginPage
                 .userLogin(user.getEmail(), user.getPassword());
 
-        assertEquals("Юзер не авторизован",
-                true,
+        assertTrue("Юзер не авторизован",
                 mainPage.checkOrderButton());
 
     }

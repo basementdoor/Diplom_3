@@ -11,7 +11,7 @@ import org.junit.After;
 import org.junit.Test;
 
 import static diplom3.utils.Utils.faker;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class SuccessRegistrationTest extends BaseBeforeAndAfter {
 
@@ -36,8 +36,7 @@ public class SuccessRegistrationTest extends BaseBeforeAndAfter {
         registrationPage
                 .userRegistration(userTestName, userTestEmail, userTestPassword);
 
-        assertEquals("Пользователь не был зарегистирован",
-                true,
+        assertTrue("Пользователь не был зарегистирован",
                 loginPage.checkEnterHeader());
 
     }

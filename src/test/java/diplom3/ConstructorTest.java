@@ -5,7 +5,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class ConstructorTest extends BaseBeforeAndAfter {
 
@@ -21,8 +21,7 @@ public class ConstructorTest extends BaseBeforeAndAfter {
                 .clickSauceSection()
                 .clickBunSection();
 
-        assertEquals("Нужный раздел не отображается",
-                true,
+        assertTrue("Нужный раздел не отображается",
                 mainPage.checkBunSelected());
 
     }
@@ -38,8 +37,7 @@ public class ConstructorTest extends BaseBeforeAndAfter {
                 .openMain()
                 .clickSauceSection();
 
-        assertEquals("Нужный раздел не отображается",
-                true,
+        assertTrue("Нужный раздел не отображается",
                 mainPage.checkSauceSelected());
 
     }
@@ -55,8 +53,7 @@ public class ConstructorTest extends BaseBeforeAndAfter {
                 .openMain()
                 .clickFillingSection();
 
-        assertEquals("Нужный раздел не отображается",
-                true,
+        assertTrue("Нужный раздел не отображается",
                 mainPage.checkFillingSelected());
     }
 }
